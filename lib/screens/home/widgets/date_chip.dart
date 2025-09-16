@@ -20,7 +20,7 @@ class DateChip extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: isToday ? Color(0xffD5F4ED) : Color(0xff628A79),
+            color: isToday ? const Color(0xffD5F4ED) : const Color(0xff628A79),
             borderRadius: BorderRadius.circular(8),
             border: Border.all(color: AppColors.primary),
           ),
@@ -33,9 +33,9 @@ class DateChip extends StatelessWidget {
                 ).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.bold),
               ),
               Text(
-                'Today',
+                isToday ? 'Today' : '',
                 style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                  color: isToday ? Colors.black : Color(0xff628A79),
+                  color: isToday ? Colors.black : const Color(0xff628A79),
                 ),
               ),
             ],

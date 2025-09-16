@@ -11,14 +11,9 @@ class CategoryChip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          width: 70,
-          height: 70,
-          padding: const EdgeInsets.all(12),
-          decoration: BoxDecoration(
-            color: Colors.grey[100],
-            shape: BoxShape.circle,
-          ),
+        CircleAvatar(
+          radius: 35,
+          backgroundColor: Colors.grey[100],
           child: Icon(icon, color: const Color(0xFF00A676)),
         ),
         SizedBox(height: AppSizes.spaceBtwItems),

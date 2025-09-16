@@ -12,7 +12,7 @@ class PartnerLogo extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: Color(0xffDBDBDB)),
+        border: Border.all(color: const Color(0xffDBDBDB)),
       ),
       child: Image.asset(image),
     );
