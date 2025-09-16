@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hashed_system_assignment/core/app_colors.dart';
-import 'package:hashed_system_assignment/screens/bottom_bar/components/bottom_bar_active_iocn.dart';
+import 'package:hashed_system_assignment/screens/bottom_bar/components/bottom_bar_active_icon.dart';
 import 'package:hashed_system_assignment/screens/bottom_bar/components/bottom_bar_label_text.dart';
 import 'package:hashed_system_assignment/screens/home/home_screen.dart';
 import 'package:hashed_system_assignment/widgets/bottom_bar.dart';
+import 'package:hashed_system_assignment/widgets/heading_label_text_widget.dart';
 import 'package:icons_plus/icons_plus.dart';
 
 class AppBottomBar extends StatefulWidget {
@@ -18,9 +19,9 @@ class _MainScreenState extends State<AppBottomBar> {
 
   final List<Widget> _screens = [
     const HomeScreen(),
-    const HomeScreen(),
-    const HomeScreen(),
-    const HomeScreen(),
+    HeadingLabelTexWidget(title: 'Coming soon..', alignment: Alignment.center),
+    HeadingLabelTexWidget(title: 'Coming soon..', alignment: Alignment.center),
+    HeadingLabelTexWidget(title: 'Coming soon..', alignment: Alignment.center),
   ];
 
   @override
@@ -32,7 +33,7 @@ class _MainScreenState extends State<AppBottomBar> {
         width: double.infinity,
         height: 80,
         decoration: BoxDecoration(color: Colors.red),
-        child: SalomonBottomBar(
+        child: MyBottomBarWidget(
           onTap: (index) => setState(() => _currentIndex = index),
           selectedItemColor: AppColors.textFieldBorderColor,
           unselectedItemColor: Color(0xffBFC0C5),
@@ -42,7 +43,7 @@ class _MainScreenState extends State<AppBottomBar> {
           ),
           currentIndex: _currentIndex,
           items: [
-            SalomonBottomBarItem(
+            MyBottomBarItem(
               icon: const Icon(Icons.home),
               activeIcon: BottomBarActiveIconWidget(icon: Icons.home),
               title: BottomBarLabelTextWidget(label: 'Home'),
@@ -53,7 +54,7 @@ class _MainScreenState extends State<AppBottomBar> {
               ),
             ),
 
-            SalomonBottomBarItem(
+            MyBottomBarItem(
               icon: Icon(Clarity.grid_view_solid),
               activeIcon: BottomBarActiveIconWidget(
                 icon: Clarity.grid_view_solid,
@@ -65,7 +66,7 @@ class _MainScreenState extends State<AppBottomBar> {
                 end: Alignment.centerRight,
               ),
             ),
-            SalomonBottomBarItem(
+            MyBottomBarItem(
               icon: const Icon(Iconsax.location_bold),
 
               activeIcon: BottomBarActiveIconWidget(
@@ -78,7 +79,7 @@ class _MainScreenState extends State<AppBottomBar> {
                 end: Alignment.centerRight,
               ),
             ),
-            SalomonBottomBarItem(
+            MyBottomBarItem(
               icon: const Icon(Iconsax.user_bold),
               selectedColor: const Color(0xFF00A676),
               activeIcon: BottomBarActiveIconWidget(icon: Iconsax.user_bold),
