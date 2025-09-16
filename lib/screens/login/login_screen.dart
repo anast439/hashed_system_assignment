@@ -6,7 +6,7 @@ import 'package:hashed_system_assignment/core/sizes.dart';
 import 'package:hashed_system_assignment/widgets/custom_button.dart';
 import 'package:hashed_system_assignment/widgets/custom_text_field.dart';
 import '../../services/auth_service.dart';
-import '../dashboard/dashboard.dart';
+import '../bottom_bar/bottom_bar.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
       if (mounted) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (_) => const Dashboard()),
+          MaterialPageRoute(builder: (_) => const AppBottomBar()),
         );
       }
     } catch (e) {
@@ -59,18 +59,18 @@ final height=MediaQuery.sizeOf(context).height;
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
               
-              SizedBox(height: USizes.appBarHeight),
+              SizedBox(height: AppSizes.appBarHeight),
                     Container(
                         child: Image.asset(AppAssets.logo,width:width,height: height * .2 )),
                     
-                SizedBox(height: USizes.spaceBtwSections ),
+                SizedBox(height: AppSizes.spaceBtwSections ),
                 
                     TextFieldWithLabelText(emailController: _emailController, label: 'Email', hintText: 'Email',),
-                    SizedBox(height: USizes.spaceBtwInputFields),
+                    SizedBox(height: AppSizes.spaceBtwInputFields),
                     TextFieldWithLabelText(emailController: _passwordController, label: 'Password', hintText: 'Password',
                     obscure: true,
                     ),
-                SizedBox(height: USizes.spaceBtwSections),
+                SizedBox(height: AppSizes.spaceBtwSections),
                 
                     Align(
                       alignment: Alignment.centerRight,
@@ -78,7 +78,7 @@ final height=MediaQuery.sizeOf(context).height;
                 
                         style: Theme.of(context).textTheme.bodySmall!.copyWith(color: AppColors.forgotPasswordColor),),
                     ),
-                    SizedBox(height: USizes.spaceBtwItems /2),
+                    SizedBox(height: AppSizes.spaceBtwItems /2),
                 
                     Row(
                       children: [
@@ -90,7 +90,7 @@ final height=MediaQuery.sizeOf(context).height;
                         Text('I agree with the terms and condition',style: Theme.of(context).textTheme.bodyMedium)
                       ],
                     ),
-                SizedBox(height: USizes.spaceBtwSections,),
+                SizedBox(height: AppSizes.spaceBtwSections,),
                     RichText(text: TextSpan(
                       children: [
                         TextSpan(text: "Don't have an account? ",style: Theme.of(context).textTheme.bodyLarge),
@@ -137,7 +137,7 @@ this.obscure=false
       children: [
         Text(label,style: Theme.of(context).textTheme.titleMedium,),
         SizedBox(
-          height: USizes.spaceBtwItems,
+          height: AppSizes.spaceBtwItems,
         ),
         CustomTextField(
             obscure: obscure,
