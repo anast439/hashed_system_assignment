@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:hashed_system_assignment/core/app_assets.dart';
 import 'package:hashed_system_assignment/core/app_colors.dart';
 import 'package:hashed_system_assignment/core/sizes.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -81,7 +82,7 @@ class _AutoScrollBannerState extends State<AutoScrollBanner> {
               return ClipRRect(
                 borderRadius: BorderRadius.circular(12),
                 child: FadeInImage.assetNetwork(
-                  placeholder: "assets/images/placeholder.png",
+                  placeholder: AppAssets.banner1,
                   image: _images[index],
                   fit: BoxFit.cover,
                 ),
