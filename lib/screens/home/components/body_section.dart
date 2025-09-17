@@ -25,7 +25,7 @@ class BodySection extends StatelessWidget {
         HorizontalList(
           height: 110,
           itemBuilder: (index) =>
-              const CategoryChip(icon: Icons.restaurant, label: 'Dining'),
+               CategoryChip(imagePath: AppAssets.dining1, label: 'Dining'),
         ),
         SizedBox(height: AppSizes.spaceBtwItems),
 

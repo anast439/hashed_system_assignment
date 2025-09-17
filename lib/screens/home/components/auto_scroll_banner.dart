@@ -81,6 +81,7 @@ class _AutoScrollBannerState extends State<AutoScrollBanner> {
             itemBuilder: (context, index) {
               return ClipRRect(
                 borderRadius: BorderRadius.circular(12),
+
                 child: FadeInImage.assetNetwork(
                   placeholder: AppAssets.banner1,
                   image: _images[index],

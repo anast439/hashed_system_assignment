@@ -49,6 +49,7 @@ class HeaderSection extends StatelessWidget {
               FilterButton(),
             ],
           ),
+          SizedBox(height: AppSizes.spaceBtwItems),
         ],
       ),
     );

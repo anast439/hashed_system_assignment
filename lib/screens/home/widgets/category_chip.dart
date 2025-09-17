@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hashed_system_assignment/core/app_colors.dart';
 import 'package:hashed_system_assignment/core/sizes.dart';
 
 class CategoryChip extends StatelessWidget {
-  final IconData icon;
+  final String imagePath;
   final String label;
 
-  const CategoryChip({super.key, required this.icon, required this.label});
+  const CategoryChip({super.key, required this.imagePath, required this.label});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +14,8 @@ class CategoryChip extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 35,
-          backgroundColor: Colors.grey[100],
-          child: Icon(icon, color: const Color(0xFF00A676)),
+          backgroundColor: AppColors.cardBackGroundColor,
+          child: Image.asset(imagePath, width: 46, height: 46),
         ),
         SizedBox(height: AppSizes.spaceBtwItems),
         Text(label, style: Theme.of(context).textTheme.bodyMedium),

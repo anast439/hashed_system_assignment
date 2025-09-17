@@ -48,8 +48,9 @@ class MyBottomBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    return ColoredBox(
-      color: backgroundColor ?? Colors.transparent,
+    return Material(
+      elevation: 0.5,
+      color: Colors.white,
       child: SafeArea(
         minimum: margin,
         child: Row(
@@ -81,6 +82,7 @@ class MyBottomBarWidget extends StatelessWidget {
                   return Material(
                     color: Colors.transparent,
                     borderRadius: BorderRadius.circular(10.0),
+
                     child: InkWell(
                       onTap: () => onTap?.call(items.indexOf(item)),
                       borderRadius: BorderRadius.circular(10.0),
@@ -114,7 +116,7 @@ class MyBottomBarWidget extends StatelessWidget {
                                   selectedColor,
                                   t,
                                 ),
-                                size: 28,
+                                size: 24,
                               ),
                               child: items.indexOf(item) == currentIndex
                                   ? item.activeIcon ?? item.icon
@@ -123,7 +125,7 @@ class MyBottomBarWidget extends StatelessWidget {
                             ClipRect(
                               clipBehavior: Clip.antiAlias,
                               child: SizedBox(
-                                height: 20,
+                                height: 25,
                                 child: Align(
                                   alignment: const Alignment(-0.2, 0.0),
                                   widthFactor: t,
