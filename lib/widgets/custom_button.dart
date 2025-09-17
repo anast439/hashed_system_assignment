@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hashed_system_assignment/core/app_colors.dart';
+import 'package:hashed_system_assignment/core/sizes.dart';
 
 class CustomButton extends StatelessWidget {
   final String label;
@@ -28,7 +29,7 @@ class CustomButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(10.0),
         ),
         width: width,
-        height: 50,
+        height: AppSizes.buttonHeight,
         child: Center(
           child: Text(
             label,

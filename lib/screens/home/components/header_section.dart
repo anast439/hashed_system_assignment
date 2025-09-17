@@ -15,7 +15,7 @@ class HeaderSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: UPadding.screenPadding,
+      padding: AppPadding.screenPadding,
       decoration: BoxDecoration(color: AppColors.cardBackGroundColor),
       child: Column(
         children: [

@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: UPadding.screenPadding,
+                padding: AppPadding.screenPadding,
                 child: const BodySection(),
               ),
             ),

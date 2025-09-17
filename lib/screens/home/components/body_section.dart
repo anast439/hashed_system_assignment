@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hashed_system_assignment/core/app_assets.dart';
 import 'package:hashed_system_assignment/core/sizes.dart';
 import 'package:hashed_system_assignment/screens/home/components/auto_scroll_banner.dart';
-import 'package:hashed_system_assignment/screens/home/home_screen.dart';
 import 'package:hashed_system_assignment/screens/home/widgets/category_chip.dart';
 import 'package:hashed_system_assignment/screens/home/widgets/date_chip.dart';
 import 'package:hashed_system_assignment/screens/home/widgets/deal_card.dart';
@@ -25,7 +24,7 @@ class BodySection extends StatelessWidget {
         HorizontalList(
           height: 110,
           itemBuilder: (index) =>
-               CategoryChip(imagePath: AppAssets.dining1, label: 'Dining'),
+              CategoryChip(imagePath: AppAssets.dining1, label: 'Dining'),
         ),
         SizedBox(height: AppSizes.spaceBtwItems),
 
